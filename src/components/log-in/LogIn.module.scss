@@ -1,0 +1,68 @@
+@import "./../variables";
+
+.container {
+	@include flexCenter(column, 1.4rem);
+	max-width: 50rem;
+	min-width: 30rem;
+	margin: 3rem;
+	form {
+		@include flexCenter(column, 1.4rem);
+		.inputform {
+			@include flexCenter(column, 0.2rem);
+
+			.inputwrapper {
+				width: inherit;
+				position: relative;
+				input {
+					width: 100%;
+					@include input();
+				}
+				.inputicon {
+					position: absolute;
+					top: 40%;
+					left: 7px;
+				}
+				.inputiconeye {
+					position: absolute;
+					top: 40%;
+					right: 7px;
+				}
+			}
+		}
+		span {
+			font-weight: bold;
+			font-size: 1.6rem;
+		}
+	}
+	.googlelogin {
+		margin: 2rem auto;
+		.google {
+			margin-top: 1rem;
+		}
+	}
+}
+
+.maingrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	// justify-content: center;
+	// margin: auto;
+	@media screen and (max-width: 860px) {
+		grid-template-columns: 1fr;
+	}
+	.mainphotobox {
+		@media screen and (max-width: 860px) {
+			display: none;
+		}
+		.mainphoto {
+			max-width: 100%;
+			height: 100vh;
+			object-fit: cover;
+		}
+	}
+	.center {
+		display: flex;
+		margin: auto;
+		margin-top: 2rem;
+	}
+}

@@ -1,0 +1,85 @@
+$green-color: #00cd8e;
+$background-color: #f2f3f3;
+$text-color: #3d3a43;
+
+.container {
+	color: $text-color;
+	padding: 0 4rem;
+	background-color: white;
+	height: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@media screen and (max-width: 760px) {
+		background-color: $background-color;
+		padding: 0 2rem;
+	}
+	.logobar {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+
+		.logo {
+			color: $green-color;
+			font-size: 3rem;
+		}
+	}
+	.linksbar {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: right;
+		gap: 5rem;
+		z-index: 10;
+		@media screen and (max-width: 760px) {
+			flex-direction: column;
+			position: fixed;
+			right: 0;
+			width: 100vw;
+			top: 5rem;
+			justify-content: center;
+			text-align: center;
+			gap: 0rem;
+			// margin-top: 5rem;
+			:nth-child(1) {
+				border-top: 1px solid white;
+			}
+		}
+		.link {
+			cursor: pointer;
+			font-weight: 400;
+			// color: $text-color;
+			&:hover,
+			&:active {
+				color: $green-color;
+			}
+			@media screen and (max-width: 760px) {
+				background-color: $background-color;
+				border-bottom: 1px solid white;
+				width: 100%;
+				margin: auto;
+				padding: 0.6rem 3rem;
+			}
+		}
+	}
+
+	.menu {
+		display: none;
+		position: absolute;
+		@media screen and (max-width: 760px) {
+			display: block;
+			top: 0;
+			right: 1rem;
+			transform: translate(-100%, 60%);
+			cursor: pointer;
+		}
+	}
+}
+
+@media screen and (max-width: 760px) {
+	#hidden {
+		display: none;
+	}
+}

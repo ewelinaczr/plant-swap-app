@@ -1,0 +1,66 @@
+.container {
+  display: -ms-grid;
+  display: grid;
+  margin: 1rem;
+  gap: 3rem;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.buttondiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+  border-radius: 20rem;
+}
+
+.buttondiv :hover {
+  background-color: #0b9b6f;
+  border-radius: 20rem;
+}
+
+.button {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 20rem;
+  border: none;
+  color: white;
+  background-color: #00cd8e;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.noplants {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem auto;
+}
+/*# sourceMappingURL=plants-shop.module.css.map */

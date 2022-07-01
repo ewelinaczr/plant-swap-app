@@ -1,0 +1,31 @@
+// COLORS
+$green-color: #00cd8e;
+$green-color-dark: #0b9b6f;
+$background-color: #f2f3f3;
+$text-color: #3d3a43;
+$swap: #3856ff;
+$give: #0caa42;
+$sell: #ff4419;
+
+// FLEXBOX
+@mixin flexCenter($direction, $gap) {
+	width: 100%;
+	display: flex;
+	flex-direction: $direction;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	gap: $gap;
+}
+// INPUT
+@mixin input {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	outline: none;
+	height: 3rem;
+	border-radius: 0.4rem;
+	border: 1px solid white;
+	background-color: white;
+	margin-top: 0.6rem;
+}

@@ -1,0 +1,104 @@
+@import "./../variables";
+
+.container {
+	@include flexCenter(column, 1.4rem);
+	max-width: 50rem;
+	margin: 3rem;
+	form {
+		@include flexCenter(column, 1.4rem);
+		.inputform {
+			@include flexCenter(column, 0.2rem);
+			input {
+				@include input();
+			}
+			.priceform {
+				position: relative;
+				width: 100%;
+				.priceicon {
+					position: absolute;
+					left: 5px;
+					top: 13px;
+				}
+			}
+		}
+		.category {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			button {
+				padding: 0.8rem 2rem;
+				border-radius: 0.4rem;
+				background-color: white;
+				border: none;
+				cursor: pointer;
+			}
+			:active,
+			:hover {
+				background-color: $green-color;
+				color: white;
+			}
+			.active {
+				background-color: $green-color;
+				color: white;
+			}
+		}
+		.formgrid {
+			@include flexCenter(row, 1.4rem);
+			.inputform {
+				input,
+				select {
+					@include input();
+				}
+			}
+		}
+		.textarea {
+			@include input();
+			height: 8rem;
+		}
+	}
+	.inputform {
+		.addphotosbox {
+			@include flexCenter(column, 1.4rem);
+			// width: 100%;
+			input {
+				width: 100%;
+				@include input();
+			}
+			input::-webkit-file-upload-button {
+				cursor: pointer;
+				background-color: $green-color;
+				border: none;
+				color: white;
+				padding: 0 2rem;
+				height: inherit;
+				border-radius: 0.4rem;
+				margin-right: 1rem;
+			}
+		}
+	}
+}
+
+.maingrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	// justify-content: center;
+	// margin: auto;
+	@media screen and (max-width: 860px) {
+		grid-template-columns: 1fr;
+	}
+	.mainphotobox {
+		@media screen and (max-width: 860px) {
+			display: none;
+		}
+		.mainphoto {
+			max-width: 100%;
+			height: 100vh;
+			object-fit: cover;
+		}
+	}
+	.center {
+		display: flex;
+		margin-top: 2rem;
+		justify-content: center;
+	}
+}

@@ -1,0 +1,193 @@
+.container {
+  height: 20rem;
+  background-color: white;
+  border-radius: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+.container .leftpart {
+  height: 20rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  position: relative;
+}
+
+.container .leftpart .image {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+
+.container .rightpart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  gap: 0.8rem;
+}
+
+.container .rightpart .upperpart .info {
+  width: 100%;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.6rem;
+}
+
+.container .rightpart .upperpart .info .nameheart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.container .rightpart .upperpart .info .nameheart .heart {
+  color: #ff4419;
+}
+
+.container .rightpart .upperpart .info .nameheart .name {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.container .rightpart .upperpart .info .labels {
+  padding: 0 0.4rem;
+  margin-bottom: 0.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  gap: 0.6rem;
+}
+
+.container .rightpart .lowerpart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.8rem;
+}
+
+.container .rightpart .lowerpart .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.6rem;
+}
+
+.container .rightpart .lowerpart .description .location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.container .rightpart .lowerpart .description .paragrid {
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  gap: 0.6rem;
+  -ms-grid-columns: 1fr 1.3fr;
+      grid-template-columns: 1fr 1.3fr;
+}
+
+.container .rightpart .lowerpart .description .paragrid .iconbox {
+  justify-self: left;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.4rem;
+}
+
+.container .rightpart .lowerpart .actionbox {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.container .rightpart .lowerpart .action {
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.container .rightpart .lowerpart .action .price {
+  color: #ff4419;
+  font-weight: 700;
+}
+
+.container .rightpart .lowerpart .action .button {
+  padding: 0.6rem 1.4rem;
+  border-radius: 20rem;
+  border: none;
+  background-color: #00cd8e;
+  color: white;
+  cursor: pointer;
+}
+/*# sourceMappingURL=plant-card.module.css.map */

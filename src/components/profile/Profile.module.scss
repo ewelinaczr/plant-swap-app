@@ -1,0 +1,139 @@
+@import "./../variables";
+
+.container {
+	// margin: auto;
+	@include flexCenter(column, 1.4rem);
+	// max-width: 50rem;
+	// margin: 3rem;
+	width: 100%;
+	.profileform {
+		@include flexCenter(row, 3rem);
+
+		.leftpart {
+			@include flexCenter(column, 1.4rem);
+			.inputform {
+				@include flexCenter(column, 0.2rem);
+				input {
+					@include input();
+				}
+			}
+		}
+		.rightpart {
+			.photocontainer {
+				display: flex;
+				flex-direction: column;
+				position: relative;
+				align-items: center;
+				justify-content: center;
+				.photo {
+					position: relative;
+					width: 10rem;
+					height: 10rem;
+					object-fit: cover;
+					border-radius: 5rem;
+				}
+				.photobtnscontainer {
+					position: absolute;
+					bottom: -2rem;
+					@include flexCenter(row, 0.6rem);
+
+					.photobtn {
+						padding: 0.4rem;
+						font-size: 1rem;
+						cursor: pointer;
+						bottom: -1rem;
+						right: 0rem;
+						width: 3.4rem;
+						height: 3.4rem;
+						border: none;
+						border-radius: 20rem;
+						background-color: $green-color;
+						color: white;
+						.buttonicon {
+							@include flexCenter(column, 0rem);
+							cursor: pointer;
+						}
+						&:hover,
+						&:active {
+							background-color: $green-color-dark;
+						}
+					}
+
+					.photobtndisabled {
+						padding: 0.4rem;
+						font-size: 1rem;
+						bottom: -1rem;
+						right: 0rem;
+						width: 3.4rem;
+						height: 3.4rem;
+						border: none;
+						border-radius: 20rem;
+						background-color: #999;
+						color: white;
+						.buttonicon {
+							@include flexCenter(column, 0rem);
+						}
+					}
+				}
+			}
+		}
+	}
+	.btnsbox {
+		margin-top: 2rem;
+		@include flexCenter(row, 1.4rem);
+		.secbtn {
+			justify-self: left;
+			cursor: pointer;
+			padding: 0.6rem 2rem;
+			border: none;
+			border-radius: 1rem;
+			background-color: $green-color;
+			color: white;
+			&:hover,
+			&:active {
+				background-color: $green-color-dark;
+			}
+		}
+	}
+	.location {
+		margin-top: 2rem;
+		width: 100%;
+		.inputform {
+			@include flexCenter(column, 0.2rem);
+			input {
+				@include input();
+			}
+		}
+	}
+	.save {
+		margin-top: 2rem;
+		@include flexCenter(column, 0.2rem);
+	}
+	.yourplants {
+		@include flexCenter(column, 0.2rem);
+		margin-top: 2rem;
+	}
+}
+
+.maingrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	@media screen and (max-width: 860px) {
+		grid-template-columns: 1fr;
+	}
+	.mainphotobox {
+		@media screen and (max-width: 860px) {
+			display: none;
+		}
+		.mainphoto {
+			max-width: 100%;
+			min-height: 100vh;
+			object-fit: cover;
+		}
+	}
+	.center {
+		display: flex;
+		margin: auto;
+		margin-top: 2rem;
+	}
+}

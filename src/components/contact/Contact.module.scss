@@ -1,0 +1,40 @@
+@import "./../variables";
+
+.maingrid {
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 1fr;
+	@media screen and (max-width: 860px) {
+		grid-template-columns: 1fr;
+	}
+	.mainphotobox {
+		@media screen and (max-width: 860px) {
+			display: none;
+		}
+		.mainphoto {
+			max-width: 100%;
+			height: 100vh;
+			object-fit: cover;
+		}
+	}
+	.center {
+		display: flex;
+		margin: auto;
+		margin-top: 2rem;
+		justify-content: center;
+		.container {
+			@include flexCenter(column, 0.4rem);
+			max-width: 50rem;
+			margin: 3rem;
+			margin-top: 2rem;
+			.textarea {
+				@include input();
+				min-width: 30rem;
+				height: 15rem;
+				margin: auto;
+				margin-top: 1rem;
+				margin-bottom: 3rem;
+			}
+		}
+	}
+}

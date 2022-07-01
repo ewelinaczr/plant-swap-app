@@ -1,0 +1,41 @@
+$green-color: #00cd8e;
+$background-color: #f2f3f3;
+$text-color: #3d3a43;
+
+.container {
+	min-width: 30rem;
+	background-color: $background-color;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 0rem;
+	.form {
+		width: 70%;
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		justify-content: right;
+		// background-color: greenyellow;
+		.icon {
+			position: absolute;
+			justify-self: right;
+			background-color: $green-color;
+			height: 3rem;
+			width: 3rem;
+			padding: 0.6rem;
+			margin-right: 0rem;
+			border-radius: 1.5rem;
+			border: 1px solid $green-color;
+		}
+		.input {
+			width: 100%;
+			text-align: center;
+			outline: none;
+			padding: 0.2rem 1rem;
+			height: 3rem;
+			border-radius: 1.5rem;
+			border: 1px solid white;
+		}
+	}
+}

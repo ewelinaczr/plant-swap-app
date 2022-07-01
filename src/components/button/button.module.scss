@@ -1,0 +1,17 @@
+// COLORS
+$green-color: #00cd8e;
+$green-color-dark: #0b9b6f;
+
+.container {
+	font-size: 1.4rem;
+	padding: 0.8rem 4rem;
+	background-color: $green-color;
+	color: white;
+	border: none;
+	border-radius: 1rem;
+	cursor: pointer;
+	&:hover,
+	active {
+		background-color: $green-color-dark;
+	}
+}

@@ -1,0 +1,125 @@
+.container {
+  color: #3d3a43;
+  padding: 0 4rem;
+  background-color: white;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 760px) {
+  .container {
+    background-color: #f2f3f3;
+    padding: 0 2rem;
+  }
+}
+
+.container .logobar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.container .logobar .logo {
+  color: #00cd8e;
+  font-size: 3rem;
+}
+
+.container .linksbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  gap: 5rem;
+  z-index: 10;
+}
+
+@media screen and (max-width: 760px) {
+  .container .linksbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    right: 0;
+    width: 100vw;
+    top: 5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    gap: 0rem;
+  }
+  .container .linksbar :nth-child(1) {
+    border-top: 1px solid white;
+  }
+}
+
+.container .linksbar .link {
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.container .linksbar .link:hover, .container .linksbar .link:active {
+  color: #00cd8e;
+}
+
+@media screen and (max-width: 760px) {
+  .container .linksbar .link {
+    background-color: #f2f3f3;
+    border-bottom: 1px solid white;
+    width: 100%;
+    margin: auto;
+    padding: 0.6rem 3rem;
+  }
+}
+
+.container .menu {
+  display: none;
+  position: absolute;
+}
+
+@media screen and (max-width: 760px) {
+  .container .menu {
+    display: block;
+    top: 0;
+    right: 1rem;
+    -webkit-transform: translate(-100%, 60%);
+            transform: translate(-100%, 60%);
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  #hidden {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Nav.module.css.map */

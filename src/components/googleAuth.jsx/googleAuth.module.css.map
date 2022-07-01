@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACZ,MAAM,EAAE,SAAS;CAKjB;;AAND,AAEC,YAFW,CAEX,OAAO,CAAC;EACP,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,OAAO;CACf",
+    "sources": [
+        "googleAuth.module.scss"
+    ],
+    "names": [],
+    "file": "googleAuth.module.css"
+}

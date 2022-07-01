@@ -1,0 +1,54 @@
+$green-color: #00cd8e;
+$green-color-dark: #0b9b6f;
+$background-color: #f2f3f3;
+$text-color: #3d3a43;
+
+.container {
+	display: grid;
+	margin: 1rem;
+	gap: 3rem;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.buttondiv {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1rem;
+	border-radius: 20rem;
+	& :hover {
+		background-color: $green-color-dark;
+		border-radius: 20rem;
+	}
+}
+
+.button {
+	width: 5rem;
+	height: 5rem;
+	border-radius: 20rem;
+	border: none;
+	color: white;
+	background-color: $green-color;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+	.container {
+		grid-template-columns: 1fr 1fr;
+		// background-color: red;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.container {
+		grid-template-columns: 1fr;
+		// background-color: green;
+	}
+}
+
+.noplants {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 3rem auto;
+}

@@ -1,0 +1,147 @@
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 1.4rem;
+  max-width: 50rem;
+  min-width: 30rem;
+  margin: 3rem;
+}
+
+.container form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 1.4rem;
+}
+
+.container form .inputform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.2rem;
+}
+
+.container form .inputform .inputwrapper {
+  min-width: 30rem;
+  position: relative;
+}
+
+.container form .inputform .inputwrapper input {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  outline: none;
+  height: 3rem;
+  border-radius: 0.4rem;
+  border: 1px solid white;
+  background-color: white;
+  margin-top: 0.6rem;
+}
+
+.container form .inputform .inputwrapper .inputicon {
+  position: absolute;
+  top: 40%;
+  left: 7px;
+}
+
+.container form .inputform .inputwrapper .inputiconeye {
+  position: absolute;
+  top: 40%;
+  right: 7px;
+}
+
+.container form span {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.container .googlelogin {
+  margin: 2rem auto;
+}
+
+.container .googlelogin .google {
+  margin-top: 1rem;
+}
+
+.container .addPlantbtn {
+  margin: 1rem auto;
+  width: 13rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 20rem;
+  background-color: #00cd8e;
+  padding: 0.6rem 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+.maingrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 860px) {
+  .maingrid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .maingrid .mainphotobox {
+    display: none;
+  }
+}
+
+.maingrid .mainphotobox .mainphoto {
+  max-width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.maingrid .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  margin-top: 2rem;
+}
+/*# sourceMappingURL=SignUp.module.css.map */

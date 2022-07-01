@@ -1,0 +1,15 @@
+.container {
+  font-size: 1.4rem;
+  padding: 0.8rem 4rem;
+  background-color: #00cd8e;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.container:hover,
+.container active {
+  background-color: #0b9b6f;
+}
+/*# sourceMappingURL=button.module.css.map */

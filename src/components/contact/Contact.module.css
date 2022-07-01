@@ -1,0 +1,78 @@
+.maingrid {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 860px) {
+  .maingrid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .maingrid .mainphotobox {
+    display: none;
+  }
+}
+
+.maingrid .mainphotobox .mainphoto {
+  max-width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.maingrid .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  margin-top: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.maingrid .center .container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 0.4rem;
+  max-width: 50rem;
+  margin: 3rem;
+  margin-top: 2rem;
+}
+
+.maingrid .center .container .textarea {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  outline: none;
+  height: 3rem;
+  border-radius: 0.4rem;
+  border: 1px solid white;
+  background-color: white;
+  margin-top: 0.6rem;
+  min-width: 30rem;
+  height: 15rem;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+/*# sourceMappingURL=Contact.module.css.map */

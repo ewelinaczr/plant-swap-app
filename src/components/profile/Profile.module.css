@@ -1,0 +1,352 @@
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 1.4rem;
+  width: 100%;
+}
+
+.container .profileform {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 3rem;
+}
+
+.container .profileform .leftpart {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 1.4rem;
+}
+
+.container .profileform .leftpart .inputform {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 0.2rem;
+}
+
+.container .profileform .leftpart .inputform input {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  outline: none;
+  height: 3rem;
+  border-radius: 0.4rem;
+  border: 1px solid white;
+  background-color: white;
+  margin-top: 0.6rem;
+}
+
+.container .profileform .rightpart .photocontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .profileform .rightpart .photocontainer .photo {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5rem;
+}
+
+.container .profileform .rightpart .photocontainer .photobtnscontainer {
+  position: absolute;
+  bottom: -2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 0.6rem;
+}
+
+.container .profileform .rightpart .photocontainer .photobtnscontainer .photobtn {
+  padding: 0.4rem;
+  font-size: 1rem;
+  cursor: pointer;
+  bottom: -1rem;
+  right: 0rem;
+  width: 3.4rem;
+  height: 3.4rem;
+  border: none;
+  border-radius: 20rem;
+  background-color: #00cd8e;
+  color: white;
+}
+
+.container .profileform .rightpart .photocontainer .photobtnscontainer .photobtn .buttonicon {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 0rem;
+  cursor: pointer;
+}
+
+.container .profileform .rightpart .photocontainer .photobtnscontainer .photobtn:hover, .container .profileform .rightpart .photocontainer .photobtnscontainer .photobtn:active {
+  background-color: #0b9b6f;
+}
+
+.container .profileform .rightpart .photocontainer .photobtnscontainer .photobtndisabled {
+  padding: 0.4rem;
+  font-size: 1rem;
+  bottom: -1rem;
+  right: 0rem;
+  width: 3.4rem;
+  height: 3.4rem;
+  border: none;
+  border-radius: 20rem;
+  background-color: #999;
+  color: white;
+}
+
+.container .profileform .rightpart .photocontainer .photobtnscontainer .photobtndisabled .buttonicon {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 0rem;
+}
+
+.container .btnsbox {
+  margin-top: 2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 1.4rem;
+}
+
+.container .btnsbox .secbtn {
+  -ms-grid-column-align: left;
+      justify-self: left;
+  cursor: pointer;
+  padding: 0.6rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #00cd8e;
+  color: white;
+}
+
+.container .btnsbox .secbtn:hover, .container .btnsbox .secbtn:active {
+  background-color: #0b9b6f;
+}
+
+.container .location {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.container .location .inputform {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 0.2rem;
+}
+
+.container .location .inputform input {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  outline: none;
+  height: 3rem;
+  border-radius: 0.4rem;
+  border: 1px solid white;
+  background-color: white;
+  margin-top: 0.6rem;
+}
+
+.container .save {
+  margin-top: 2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 0.2rem;
+}
+
+.container .yourplants {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 0.2rem;
+  margin-top: 2rem;
+}
+
+.maingrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 860px) {
+  .maingrid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .maingrid .mainphotobox {
+    display: none;
+  }
+}
+
+.maingrid .mainphotobox .mainphoto {
+  max-width: 100%;
+  min-height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.maingrid .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  margin-top: 2rem;
+}
+/*# sourceMappingURL=Profile.module.css.map */

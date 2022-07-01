@@ -1,0 +1,53 @@
+.container {
+  min-width: 30rem;
+  background-color: #f2f3f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 0rem;
+}
+
+.container .form {
+  width: 70%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.container .form .icon {
+  position: absolute;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  background-color: #00cd8e;
+  height: 3rem;
+  width: 3rem;
+  padding: 0.6rem;
+  margin-right: 0rem;
+  border-radius: 1.5rem;
+  border: 1px solid #00cd8e;
+}
+
+.container .form .input {
+  width: 100%;
+  text-align: center;
+  outline: none;
+  padding: 0.2rem 1rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  border: 1px solid white;
+}
+/*# sourceMappingURL=Search.module.css.map */

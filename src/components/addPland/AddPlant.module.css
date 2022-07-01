@@ -1,0 +1,236 @@
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 1.4rem;
+  max-width: 50rem;
+  margin: 3rem;
+}
+
+.container form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 1.4rem;
+}
+
+.container form .inputform {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 0.2rem;
+}
+
+.container form .inputform input {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  outline: none;
+  height: 3rem;
+  border-radius: 0.4rem;
+  border: 1px solid white;
+  background-color: white;
+  margin-top: 0.6rem;
+}
+
+.container form .inputform .priceform {
+  position: relative;
+  width: 100%;
+}
+
+.container form .inputform .priceform .priceicon {
+  position: absolute;
+  left: 5px;
+  top: 13px;
+}
+
+.container form .category {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container form .category button {
+  padding: 0.8rem 2rem;
+  border-radius: 0.4rem;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.container form .category :active,
+.container form .category :hover {
+  background-color: #00cd8e;
+  color: white;
+}
+
+.container form .category .active {
+  background-color: #00cd8e;
+  color: white;
+}
+
+.container form .formgrid {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 1.4rem;
+}
+
+.container form .formgrid .inputform input,
+.container form .formgrid .inputform select {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  outline: none;
+  height: 3rem;
+  border-radius: 0.4rem;
+  border: 1px solid white;
+  background-color: white;
+  margin-top: 0.6rem;
+}
+
+.container form .textarea {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  outline: none;
+  height: 3rem;
+  border-radius: 0.4rem;
+  border: 1px solid white;
+  background-color: white;
+  margin-top: 0.6rem;
+  height: 8rem;
+}
+
+.container .inputform .addphotosbox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 1.4rem;
+}
+
+.container .inputform .addphotosbox input {
+  width: 100%;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  outline: none;
+  height: 3rem;
+  border-radius: 0.4rem;
+  border: 1px solid white;
+  background-color: white;
+  margin-top: 0.6rem;
+}
+
+.container .inputform .addphotosbox input::-webkit-file-upload-button {
+  cursor: pointer;
+  background-color: #00cd8e;
+  border: none;
+  color: white;
+  padding: 0 2rem;
+  height: inherit;
+  border-radius: 0.4rem;
+  margin-right: 1rem;
+}
+
+.maingrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 860px) {
+  .maingrid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .maingrid .mainphotobox {
+    display: none;
+  }
+}
+
+.maingrid .mainphotobox .mainphoto {
+  max-width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.maingrid .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=AddPlant.module.css.map */
