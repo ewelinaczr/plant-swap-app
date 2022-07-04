@@ -41,6 +41,7 @@ function PlantCard({ plant, id, onDelete }) {
 			<div className={styles.leftpart}>
 				<img
 					className={styles.image}
+					alt={plant.name}
 					src={plant.imageUrls[0]}
 					onClick={() => navigate(`/shop/${id}`)}
 				/>
