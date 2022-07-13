@@ -367,7 +367,7 @@ function AddPlant() {
 										onChange={onMutate}
 										max='6'
 										min='1'
-										accept='.jpg,.png,.jpeg'
+										accept='.jpg,.png,.jpeg,.avif'
 										multiple
 										required
 									/>
