@@ -1,16 +1,21 @@
 $green-color: #00cd8e;
+$green-color-dark: #0b9b6f;
 $background-color: #f2f3f3;
 $text-color: #3d3a43;
-
 .container {
 	min-width: 30rem;
+	max-width: 1400px;
+	margin: auto;
 	background-color: $background-color;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 1rem 0rem;
+
 	.form {
 		width: 70%;
+		margin: 1rem auto;
+		max-width: 400px;
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -30,6 +35,8 @@ $text-color: #3d3a43;
 		}
 		.input {
 			width: 100%;
+			// margin: auto;
+			// max-width: 400px;
 			text-align: center;
 			outline: none;
 			padding: 0.2rem 1rem;
@@ -37,5 +44,31 @@ $text-color: #3d3a43;
 			border-radius: 1.5rem;
 			border: 1px solid white;
 		}
+	}
+	.buttondiv {
+		display: flex;
+		text-align: right;
+		justify-content: center;
+		align-items: center;
+		margin-top: 1rem;
+		margin-right: 2rem;
+		border-radius: 20rem;
+		& :hover {
+			background-color: $green-color-dark;
+			border-radius: 20rem;
+		}
+	}
+
+	.button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 3rem;
+		height: 3rem;
+		border-radius: 20rem;
+		border: none;
+		color: white;
+		background-color: $green-color;
+		cursor: pointer;
 	}
 }
