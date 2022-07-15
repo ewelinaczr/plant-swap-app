@@ -11,6 +11,7 @@ import SignUp from "./components/signUp/SignUp";
 import PlantShop from "./components/plants-shop/plants-shop";
 import Profile from "./components/profile/Profile";
 import AddPlant from "./components/addPland/AddPlant";
+import EditPlant from "./components/editPlant/EditPlant";
 import LogIn from "./components/log-in/LogIn";
 import PrivateRoute from "./components/PrivateRoute";
 import Contact from "./components/contact/Contact";
@@ -34,6 +35,7 @@ function App() {
 							{/* <Route path='/profile/messages' element={<Profile />} /> */}
 						</Route>
 						<Route path='/add-plant' element={<AddPlant />} />
+						<Route path='/edit-plant/:plantId' element={<EditPlant />} />
 						<Route path='/log-in' element={<LogIn />} />
 						<Route path='/sign-up' element={<SignUp />} />
 						<Route path='/contact/:ownerId' element={<Contact />} />

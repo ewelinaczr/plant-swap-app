@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./AddPlant.module.scss";
+import styles from "./EditPlant.module.scss";
 import { Fragment, useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 // FIREBASE
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import {
@@ -10,7 +10,7 @@ import {
 	uploadBytesResumable,
 	getDownloadURL,
 } from "firebase/storage";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { doc, updateDoc, getDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "./../../firebase.config";
 // ICONS
 import { BsCurrencyDollar } from "react-icons/bs";
@@ -22,7 +22,9 @@ import { toast } from "react-toastify";
 // ID
 import { v4 as uuidv4 } from "uuid";
 
-function AddPlant() {
+function EditPlant() {
+	const params = useParams();
+	const [plant, setPlant] = useState(false);
 	const [geolocationEnabled, setGeolocationEnabled] = useState(true);
 	const [loading, setLoading] = useState(false);
 	const [formData, setFormData] = useState({
@@ -45,7 +47,7 @@ function AddPlant() {
 	});
 
 	const {
-		address,
+		address = "warsaw",
 		description,
 		give,
 		latitude,
@@ -67,40 +69,62 @@ function AddPlant() {
 	const navigate = useNavigate();
 	const isMounted = useRef(true);
 
+	// Fetch plant to edit
+	useEffect(() => {
+		setLoading(true);
+		const fetchPlant = async () => {
+			const docRef = doc(db, "plants", params.plantId);
+			const docSnap = await getDoc(docRef);
+			if (docSnap.exists()) {
+				setPlant(docSnap.data());
+				setFormData({ ...docSnap.data(), address: docSnap.data().location });
+				setLoading(false);
+			} else {
+				navigate("/");
+				toast.error("Plant deos not exist.");
+			}
+		};
+		fetchPlant();
+	}, [navigate, params.plantId]);
+	console.log(plant);
+
+	// Redirect if plant is not users
+	useEffect(() => {
+		if (plant && plant.useRef !== auth.currentUser.uid) {
+			toast.error("You can not edit that plant");
+			navigate("/");
+		}
+	}, []);
+
+	// Sets userRef to logged in user
 	useEffect(() => {
 		if (isMounted) {
 			onAuthStateChanged(auth, (user) => {
-				// get user id - set formData state
 				if (user) {
 					setFormData({ ...formData, userRef: user.uid });
 				} else {
-					navigate("/sign-up");
+					navigate("/log-in");
 				}
 			});
 		}
 		return () => {
 			isMounted.current = false;
 		};
-	}, [isMounted]);
+	}, [isMounted, auth, navigate]);
 
-	if (loading) {
-		return <Spinner />;
-	}
-
+	// Form submit
 	const onSubmit = async (e) => {
 		e.preventDefault();
 		setLoading(true);
+
 		if (imgUrls.length > 6) {
-			setLoading(false);
-			toast.error("Max 6 images");
+			toast.error("You can upload maximum 6 photos.");
 			return;
 		}
-		// GEOLOCATION
-		let geolocation = {
-			latitude: "",
-			longitude: "",
-		};
+		// Geolocation setting
+		let geolocation = {};
 		let location;
+
 		if (geolocationEnabled) {
 			const response = await fetch(
 				`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.REACT_APP_GEOCODE_API_KEY}`
@@ -123,15 +147,15 @@ function AddPlant() {
 		} else {
 			geolocation.latitude = latitude;
 			geolocation.longitude = longitude;
-			location = address;
+			// location = address;
 		}
 
-		// UPLOAD IMAGES TO FIREBASE
+		// Store images in firebase
 		const storeImage = async (image) => {
 			return new Promise((res, rej) => {
 				// initialize storage
 				const storage = getStorage();
-				// create file name with userId/imgName/imgId
+				// create file name
 				const fileName = `${auth.currentUser.uid}-${image.name}-${uuidv4()}`;
 				const storageRef = ref(storage, "images/" + fileName);
 				const uploadTask = uploadBytesResumable(storageRef, image);
@@ -171,7 +195,6 @@ function AddPlant() {
 			});
 		};
 
-		// CALL FUNCTION FOR MULTIPLE IMAGES
 		const imageUrls = await Promise.all(
 			[...imgUrls].map((image) => storeImage(image))
 		).catch(() => {
@@ -179,7 +202,6 @@ function AddPlant() {
 			toast.error("Images not uploaded");
 			return;
 		});
-		console.log(imageUrls);
 		// Object to submit to database
 		const formDataCopy = {
 			...formData,
@@ -188,46 +210,58 @@ function AddPlant() {
 			timestamp: serverTimestamp(),
 		};
 		formDataCopy.location = address;
-		// delete info that was overwriten
-		// images from storage and address from geocoding
+		// delete info that was overwritem
 		delete formDataCopy.imgUrls;
 		delete formDataCopy.address;
 		// location && (formDataCopy.location = location);
-		// add data to collection
-		const docRef = await addDoc(collection(db, "plants"), formDataCopy);
+		// Update listing
+		console.log(params.plantId);
+		// const docRef = await addDoc(collection(db, "listings"), formDataCopy);
+		const docRef = doc(db, "plants", params.plantId);
+		const docSnap = await getDoc(docRef);
+		if (docSnap.exists()) {
+			console.log("Document data:", docSnap.data());
+		} else {
+			// doc.data() will be undefined in this case
+			console.log("No such document!");
+		}
+		console.log(docRef);
+		console.log(formDataCopy);
+		await updateDoc(docRef, formDataCopy);
+		console.log(formDataCopy);
 		setLoading(false);
-		toast.success("Plant added");
+		toast.success("Plant saved");
 		// Navigate to the created plant
-		navigate(`/shop/${docRef.id}`);
-
-		setLoading(false);
+		// navigate(`/category/${formDataCopy.type}/${docRef.id}`);
+		navigate(`/shop`);
 	};
 
+	// Inputs buttons on mutate
 	const onMutate = (e) => {
-		let offer;
+		let boolean = null;
 		if (e.target.value === "true") {
-			offer = false;
+			boolean = true;
 		}
 		if (e.target.value === "false") {
-			offer = true;
+			boolean = false;
 		}
-
 		// Files
 		if (e.target.files) {
-			setFormData((prevState) => ({
-				...prevState,
-				imgUrls: e.target.files,
-			}));
+			setFormData((prevSt) => ({ ...prevSt, imgUrls: e.target.files }));
 		}
-
 		// Text/Booleans/Numbers
 		if (!e.target.files) {
-			setFormData((prevState) => ({
-				...prevState,
-				[e.target.id]: offer ?? e.target.value,
+			setFormData((prevSt) => ({
+				...prevSt,
+				[e.target.id]: boolean ?? e.target.value,
 			}));
 		}
 	};
+
+	// Loading spinner
+	if (loading) {
+		return <Spinner />;
+	}
 
 	return (
 		<Fragment>
@@ -240,7 +274,7 @@ function AddPlant() {
 				</div>
 				<div className={styles.center}>
 					<div className={styles.container}>
-						<h2>Describe your Plant</h2>
+						<h2>Edit your Plant</h2>
 						<form onSubmit={onSubmit}>
 							<div className={styles.inputform}>
 								<label>Plant name</label>
@@ -373,7 +407,7 @@ function AddPlant() {
 									/>
 								</div>
 							</div>
-							<Button type='submit'>add Plant</Button>
+							<Button type='submit'>edit Plant</Button>
 						</form>
 					</div>
 				</div>
@@ -382,4 +416,4 @@ function AddPlant() {
 	);
 }
 
-export default AddPlant;
+export default EditPlant;

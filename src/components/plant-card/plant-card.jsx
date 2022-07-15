@@ -10,6 +10,7 @@ import { BsFillSuitHeartFill } from "react-icons/bs";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
 import { AiOutlineDelete } from "react-icons/ai";
+import { AiOutlineEdit } from "react-icons/ai";
 // COMPONENTS
 import Label from "./../label/Label";
 // CONTEXR
@@ -17,7 +18,7 @@ import FavContext from "../../context/FavContext";
 
 let arr = [];
 
-function PlantCard({ plant, id, onDelete }) {
+function PlantCard({ plant, id, onDelete, onEdit }) {
 	const navigate = useNavigate();
 	const [favourite, setFavourite] = useState(false);
 	const [favArr, setFavArr] = useState([]);
@@ -93,17 +94,28 @@ function PlantCard({ plant, id, onDelete }) {
 					</div>
 					<div className={styles.actionbox}>
 						<div className={styles.action}>
-							{plant.sell ? (
-								<p className={styles.price}>${plant.price}</p>
-							) : (
-								<p> </p>
-							)}
-							{onDelete && (
-								<AiOutlineDelete
-									fill='#ff4419'
-									onClick={() => onDelete(plant.id, plant.name)}
-								/>
-							)}
+							<div className={styles.action_col}>
+								{plant.sell ? (
+									<p className={styles.price}>${plant.price}</p>
+								) : (
+									<p> </p>
+								)}
+
+								<div className={styles.action_row}>
+									{onDelete && (
+										<AiOutlineDelete
+											fill='#ff4419'
+											onClick={() => onDelete(plant.id, plant.name)}
+										/>
+									)}
+									{onEdit && (
+										<AiOutlineEdit
+											fill='#ff4419'
+											onClick={() => onEdit(plant.id)}
+										/>
+									)}
+								</div>
+							</div>
 							<button
 								className={styles.button}
 								onClick={() => navigate(`/shop/${id}`)}

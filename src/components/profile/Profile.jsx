@@ -45,7 +45,7 @@ function Profile() {
 
 	const onLogOut = () => {
 		auth.signOut();
-		navigate("/");
+		navigate("/log-in");
 	};
 
 	// Profile photo set up
@@ -125,6 +125,10 @@ function Profile() {
 			setPlants(updatedPlants);
 			toast.success("Successfully deleted plant");
 		}
+	};
+
+	const onEdit = async (plantId) => {
+		navigate(`/edit-plant/${plantId}`);
 	};
 
 	const handleChange = (e) => {
@@ -256,6 +260,7 @@ function Profile() {
 										plant={plant.data}
 										id={plant.id}
 										onDelete={() => onDelete(plant.id)}
+										onEdit={() => onEdit(plant.id)}
 									/>
 								))}
 							</Fragment>
