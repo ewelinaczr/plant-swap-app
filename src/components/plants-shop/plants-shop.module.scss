@@ -5,9 +5,11 @@ $text-color: #3d3a43;
 
 .container {
 	display: grid;
-	margin: 1rem;
+	margin: 1rem auto;
+	padding: 0 1rem;
 	gap: 3rem;
 	grid-template-columns: 1fr 1fr 1fr;
+	max-width: 1400px;
 }
 .buttondiv {
 	display: flex;
