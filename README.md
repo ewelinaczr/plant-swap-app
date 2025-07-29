@@ -1,72 +1,42 @@
-NETLIFY DEMO LINK: https://plants-swap-app.netlify.app
+# 🌿 Plant Swap App
 
-# Getting Started with Create React App
+A vibrant and responsive web application designed for plant enthusiasts to share, browse, and swap plants. Built with **React**, this project demonstrates clean UI design, modular architecture, and a love for greenery.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🎯 Purpose
 
-## Available Scripts
+The Plant Swap App aims to create a digital space where users can discover and exchange plants or cuttings. It serves as a front-end prototype for a community-driven plant sharing platform, highlighting your skills in building interactive and visually appealing interfaces.
 
-In the project directory, you can run:
+## 🔧 Technologies Used
 
-### `npm start`
+- **React** – Component-based UI development  
+- **JavaScript** – Core scripting language  
+- **SCSS** – Modular and maintainable styling  
+- **HTML & CSS** – Structure and layout  
+- **Netlify** – Deployment platform
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🌱 Plant Browsing Users can explore a variety of plants with images and descriptions.
 
-### `npm test`
+➕ Add New Plants Easily add new plant entries to the collection.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🔍 Search Functionality Quickly find plants by name or category.
 
-### `npm run build`
+📱 Responsive Design Optimized for mobile, tablet, and desktop devices.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🎨 SCSS Styling Clean and modular styles for maintainability.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🚀 Netlify Deployment Fast and reliable hosting with continuous deployment.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🌐 Live Demo
 
-### `npm run eject`
+Explore the app live: [plants-swap-app.netlify.app](https://plants-swap-app.netlify.app)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📸 Screenshots
+<img width="1900" height="931" alt="image" src="https://github.com/user-attachments/assets/541e82f4-cb40-4bfb-aedf-763ee8507e72" />
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img width="1898" height="935" alt="image" src="https://github.com/user-attachments/assets/a2bb360f-7c49-4313-b2fa-e2695d16be17" />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<img width="1888" height="944" alt="image" src="https://github.com/user-attachments/assets/9022b435-4745-4f1d-b4ea-ec56dfe24b9e" />
+<img width="1889" height="934" alt="image" src="https://github.com/user-attachments/assets/a1ea0981-190a-4910-83ee-45a16c5b1ecf" />
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
